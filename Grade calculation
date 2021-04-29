@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a,b,c,d,e,n;
+  int avg,i;
+  char name;
+  float total;
+  printf("Enter the number of students: ");
+  scanf("%d", &n);
+  
+  for(i=0;i<n;i++){
+      printf("Roll number:%d", i+1);
+      printf("\nEnter name:");
+      scanf("%s", &name);
+      printf("\nEnter the marks in the order 1)French 2)English 3)Maths 4)Physics 5)Chemisitry: ");
+      scanf("%d\n%d\n%d\n%d\n%d", &a,&b,&c,&d,&e);
+      avg = a+b+c+d+e;
+      total = avg/5;
+
+      if (total>=80.000){
+        printf("percentage obtained is:%f", total);
+        printf("\nGrade A");
+        printf("\nVery good! Keep it up\n");}
+      else if (total>=60.000){
+         printf("percentage obtained is:%f", total);
+         printf("\nGrade B");
+         printf("\nGood\n");}
+      else if (total>=40.000){
+        printf("percentage obtained is:%f", total);
+        printf("\nGrade C");
+        printf("\nCan do better\n");
+      } 
+      else{
+        printf("percentage obtained is:%f", total);
+        printf("\nGrade D");
+        printf("\nWork hard!\n");
+      }
+    }
+    return 0;
+  }
